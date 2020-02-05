@@ -1,8 +1,15 @@
+/**
+ * 
+ */
 package Uno;
 
+/**
+ * @Omar Jawed
+ *@991593731
+ */
 import java.util.ArrayList;
 
-public class Game extends Main {
+public abstract class Game {
 
 	private ArrayList[] playerHands;
 
@@ -14,3 +21,4 @@ public class Game extends Main {
 		throw new UnsupportedOperationException();
 	}
 }
+
