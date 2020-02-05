@@ -14,11 +14,11 @@ public abstract class Game {
 	private ArrayList[] playerHands;
 
 	public void Play() {
-		throw new UnsupportedOperationException();
+		
 	}
 
 	public void operation() {
-		throw new UnsupportedOperationException();
+		
 	}
 }
 
