@@ -4,8 +4,7 @@
 package ca.sheridancollege.project;
 
 /**
- * @Omar Jawed
- *@991593731
+ * @Omar Jawed @991593731
  */
 public class play {
 
