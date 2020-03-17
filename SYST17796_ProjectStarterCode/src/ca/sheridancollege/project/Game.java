@@ -21,6 +21,7 @@ public abstract class Game
     {
         String gameName = givenName;
         ArrayList<Player> players = new ArrayList<Player>();
+        ArrayList<Card> discard = new ArrayList<Card>();
     }
 
     /**
