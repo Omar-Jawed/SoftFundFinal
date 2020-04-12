@@ -21,20 +21,20 @@ public class NumberCards {
         NINE    { public String toString() { return "9";}}
     }
     
-    public enum Special {
+    public enum WildCard {
         SKIP    { public String toString() { return "SKIP";}},
         REVERSE { public String toString() { return "REVERSE";}},
         DRAWTWO { public String toString() { return "+2";}}
     }
 
-    public void EspecialCard(Color color, Special special){
+    public void WildCard(Color color, WildCard wild){
         this.color = color;
-        this.special = special;
+        this.wild = wild;
     }
 
     private Color color;
     private Value value;
-    private Special special;
+    private WildCard wild;
 
     public void NormalCard(final Color color, final Value value){
         this.color = color;
@@ -49,7 +49,7 @@ public class NumberCards {
     	return this.value.toString();
     }
     
-	public String getSpecial() {
-		return this.special.toString();
+	public String getWild() {
+		return this.wild.toString();
 	}
 }
