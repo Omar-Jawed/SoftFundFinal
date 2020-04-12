@@ -48,23 +48,8 @@ public class NumberCards {
     public String getValue(){
     	return this.value.toString();
     }
-
-	public void numCards() {
-
-	}
-
-	public void skip() {
-
-	}
-
-	public void reverse() {
-
-	}
-
-	public void plus2() {
-
-	}
-	public Special getSpecial() {
-		return special;
+    
+	public String getSpecial() {
+		return this.special.toString();
 	}
 }
