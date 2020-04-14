@@ -9,51 +9,44 @@ import java.util.ArrayList;
 import java.util.*;
 
 /**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
- * @author  dancye, 2018
+ * A class that models each Player in the game. Players have an identifier,
+ * which should be unique.
+ * 
+ * @author dancye, 2018
  */
-public abstract class Player {
-	private String playerID; // the unique ID for this player
-	private ArrayList<Card> hand;
-
+public class Player {
+	private playerNumber <Integer> p_id;
+	private NumberCards p_hand;
+	private String p_name;
+	
+	public Player(playerNumber<Integer> p_id){
+		this("Player ", p_id.getID());
+		this.p_name += this.p_id.getID();
+	}
+	
+	public Player(String name, int p_id) {
+		this.p_id   = new playerNumber<Integer>(p_id);
+		this.p_hand = new NumberCards();
+		this.p_name = name;
+	}
+	
+	public Player(String name, playerNumber<Integer> p_id){
+		this(name, p_id.getID());
+	}
+	
 	/**
-	 * A constructor that allows you to set the player's unique ID
-	 * 
-	 * @param name the unique ID to assign to this player.
+	 * Get the Identification (ID) of the player.
+	 * @return the player's ID.
 	 */
-	public Player(String name, ArrayList<Card> Cardhand) {
-		playerID = name;
-		hand = Cardhand;
+	public int getID(){
+		return this.p_id.getID();
 	}
-
+	
 	/**
-	 * @return the playerID
+	 * Get the name of the player.
+	 * @return the player's name.
 	 */
-	public String getPlayerID() {
-		return playerID;
+	public String getName(){
+		return this.p_name;
 	}
-
-	/**
-	 * Ensure that the playerID is unique
-	 * 
-	 * @param givenID the playerID to set
-	 */
-	public void setPlayerID(String givenID) {
-		playerID = givenID;
-	}
-
-	/**
-	 * The method to be instantiated when you subclass the Player class with your
-	 * specific type of Player and filled in with logic to play your game.
-	 */
-	public abstract void play();
-
-	public ArrayList<Card> getHand() {
-		return this.hand;
-	}
-
-	public void setHand(ArrayList<Card> hand) {
-		this.hand = hand;
-	}
-
 }
