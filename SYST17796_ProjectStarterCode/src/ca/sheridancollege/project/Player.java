@@ -15,38 +15,34 @@ import java.util.*;
  * @author dancye, 2018
  */
 public class Player {
-	private playerNumber <Integer> p_id;
-	private NumberCards p_hand;
-	private String p_name;
+	private playerNumber <Integer> playerNum;
+	private NumberCards hand;
+	private String name;
 	
-	public Player(playerNumber<Integer> p_id){
-		this("Player ", p_id.getID());
-		this.p_name += this.p_id.getID();
+	public Player(playerNumber<Integer> playerNum){
+		this("Player ", playerNum.getNum());
+		this.name += this.playerNum.getNum();
 	}
 	
-	public Player(String name, int p_id) {
-		this.p_id   = new playerNumber<Integer>(p_id);
-		this.p_hand = new NumberCards();
-		this.p_name = name;
+	public Player(String name, int playerNum) {
+		this.playerNum   = new playerNumber<Integer>(playerNum);
+		this.hand = new NumberCards();
+		this.name = name;
 	}
 	
-	public Player(String name, playerNumber<Integer> p_id){
-		this(name, p_id.getID());
+	public Player(String name, playerNumber<Integer> playerNum){
+		this(name, playerNum.getNum());
 	}
 	
-	/**
-	 * Get the Identification (ID) of the player.
-	 * @return the player's ID.
-	 */
-	public int getID(){
-		return this.p_id.getID();
+	public int getNum(){
+		return this.playerNum.getNum();
 	}
 	
-	/**
-	 * Get the name of the player.
-	 * @return the player's name.
-	 */
+	public int numCards(){
+		return hand.getNumCards();
+	}
+	
 	public String getName(){
-		return this.p_name;
+		return this.name;
 	}
 }

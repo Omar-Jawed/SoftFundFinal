@@ -14,7 +14,7 @@ public class playerNumber <Type>{
 		this.num = num;
 	}
 	
-	public Type getID(){
+	public Type getNum(){
 		return this.num; 
 	}
 }
