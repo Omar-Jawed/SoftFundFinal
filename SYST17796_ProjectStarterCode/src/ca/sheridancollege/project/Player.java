@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class Player {
 	private playerNumber <Integer> playerNum;
-	private NumberCards hand;
+	private Hand hand;
 	private String name;
 	
 	public Player(playerNumber<Integer> playerNum){
@@ -26,7 +26,7 @@ public class Player {
 	
 	public Player(String name, int playerNum) {
 		this.playerNum   = new playerNumber<Integer>(playerNum);
-		this.hand = new NumberCards();
+		this.hand = new Hand();
 		this.name = name;
 	}
 	
